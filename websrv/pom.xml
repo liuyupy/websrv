@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.liuyu</groupId>
+		<artifactId>pom-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+
+
+	<groupId>com.liuyu.websrv</groupId>
+	<artifactId>websrv</artifactId>
+	<packaging>pom</packaging>
+
+	<name>websrv</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<camel-version>2.14.0</camel-version>
+	</properties>
+	<modules>
+		<module>websrv-camel</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-core</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.camel</groupId>
+				<artifactId>camel-spring</artifactId>
+				<version>${camel-version}</version>
+			</dependency>
+		</dependencies>
+
+	</dependencyManagement>
+</project>
